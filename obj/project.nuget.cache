@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "BjsITmyuf/8LLElJqNVu9Vm01R8ByYe86JO1kVJmNCSexv2UTzULzLzyatCjCFZB8zdXcaQ0hLnRtODJo3gO2w==",
+  "success": true,
+  "projectFilePath": "/Users/kiryadanilyuk/Desktop/UNI/dice/dice.csproj",
+  "expectedPackageFiles": [
+    "/Users/kiryadanilyuk/.nuget/packages/microsoft.netcore.app/2.0.0/microsoft.netcore.app.2.0.0.nupkg.sha512",
+    "/Users/kiryadanilyuk/.nuget/packages/microsoft.netcore.dotnetapphost/2.0.0/microsoft.netcore.dotnetapphost.2.0.0.nupkg.sha512",
+    "/Users/kiryadanilyuk/.nuget/packages/microsoft.netcore.dotnethostpolicy/2.0.0/microsoft.netcore.dotnethostpolicy.2.0.0.nupkg.sha512",
+    "/Users/kiryadanilyuk/.nuget/packages/microsoft.netcore.dotnethostresolver/2.0.0/microsoft.netcore.dotnethostresolver.2.0.0.nupkg.sha512",
+    "/Users/kiryadanilyuk/.nuget/packages/microsoft.netcore.platforms/2.0.0/microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "/Users/kiryadanilyuk/.nuget/packages/netstandard.library/2.0.0/netstandard.library.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
