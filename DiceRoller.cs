@@ -11,23 +11,27 @@ namespace diceroll
     public class DiceRollerInJava
     {
 
-        int[,,] faceConfig = new int[6, 3, 3]
-                           { { { 0, 0, 0 }, { 0, 1, 0 }, { 0, 0, 0 } },
-                           { { 0, 0, 1 }, { 0, 0, 0 }, { 1, 0, 0 } },
-                           { { 0, 0, 1 }, { 0, 1, 0 }, { 1, 0, 0 } },
-                           { { 1, 0, 1 }, { 0, 0, 0 }, { 1, 0, 1 } },
-                           { { 1, 0, 1 }, { 0, 1, 0 }, { 1, 0, 1 } },
-                           { { 1, 0, 1 }, { 1, 0, 1 }, { 1, 0, 1 } } };
+        int [][][] faceConfig = new int [][][]
+            {
+                new int [][] { new int[] { 0, 0, 0 }, new int[] { 0, 1, 0 }, new int[] { 0, 0, 0 } },
+                new int [][] { new int[] { 0, 0, 1 }, new int[] { 0, 0, 0 }, new int[] { 1, 0, 0 } },
+                new int [][] { new int[] { 0, 0, 1 }, new int[] { 0, 1, 0 }, new int[] { 1, 0, 0 } },
+                new int [][] { new int[] { 1, 0, 1 }, new int[] { 0, 0, 0 }, new int[] { 1, 0, 1 } },
+                new int [][] { new int[] { 1, 0, 1 }, new int[] { 0, 1, 0 }, new int[] { 1, 0, 1 } },
+                new int [][] { new int[] { 1, 0, 1 }, new int[] { 1, 0, 1 }, new int[] { 1, 0, 1 } }
 
-        public static void main(String[] args)
+
+
+            };
+        public static void Main(String[] args)
         {
             Console.ReadLine();
             DiceRollerInJava dice = new DiceRollerInJava();
             while (true)
             {
-                int result = dice.roll();
+                int result = dice.Roll();
                 Console.WriteLine("dice face value:" + result);
-                dice.draw(result);
+                dice.Draw(result);
 
                 Console.WriteLine("Roll again? (type no to quit):");
                 string input = Console.ReadLine();
@@ -40,24 +44,23 @@ namespace diceroll
         }
 
         // Draw the dice face using ascii characters
-        private void draw(int value)
+        private void Draw(int value)
         {
-            int[,] displayVal = new int[faceConfig[value - 1]] ; 
-
+            int[][] displayVal = faceConfig[value - 1];
             Console.WriteLine("-----");
 
             for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine("|");
+                Console.Write("|");
                 for (int j = 0; j < 3; j++)
                 {
-                    if (displayVal[i,j] == 1)
+                    if (displayVal[i][j] == 1)
                     {
-                        Console.WriteLine("o");
+                        Console.Write("o");
                     }
                     else
                     {
-                        Console.WriteLine(" ");
+                        Console.Write(" ");
                     }
                 }
                 Console.WriteLine("|");
@@ -67,7 +70,7 @@ namespace diceroll
         }
 
         // Roll the dice in Java
-        private int roll()
+        private int Roll()
         {
             var rand = new Random();
             return rand.Next(6) + 1;
