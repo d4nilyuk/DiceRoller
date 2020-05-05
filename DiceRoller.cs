@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 using System.IO;
 using SplashKitSDK;
 
-namespace diceroll
+namespace DiceRoller
 {
-    public class DiceRollerInJava
+    public class DiceRoller
     {
+        private Color _color;
+        private double _x, _y, _width, _height;
+        private int _diceValue = 0;
 
-        int [][][] faceConfig = new int [][][]
+        private int [][][] faceConfig = new int [][][]
             {
                 new int [][] { new int[] { 0, 0, 0 }, new int[] { 0, 1, 0 }, new int[] { 0, 0, 0 } },
                 new int [][] { new int[] { 0, 0, 1 }, new int[] { 0, 0, 0 }, new int[] { 1, 0, 0 } },
@@ -23,10 +26,19 @@ namespace diceroll
 
 
             };
-        public static void Main(String[] args)
+
+        public DiceRoller()
         {
+            _color = Color.Black;
+            _x = 300;
+            _y = 200;
+            _width = 200;
+            _height = 200;
+        }
+       /*
+        * public static void Main(String[] args) {
             Console.ReadLine();
-            DiceRollerInJava dice = new DiceRollerInJava();
+            DiceRoller dice = new DiceRoller();
             while (true)
             {
                 int result = dice.Roll();
@@ -42,38 +54,41 @@ namespace diceroll
                 }
             }
         }
+        */
+       
 
-        // Draw the dice face using ascii characters
-        private void Draw(int value)
+        // Draw the dice face using splashkit shapes
+        public void Draw()
         {
-            int[][] displayVal = faceConfig[value - 1];
-            Console.WriteLine("-----");
+            int[][] displayVal = faceConfig[_diceValue - 1];
+            double _circleX = _x, _circleY = _y, _circleRadius = 50;
 
+            SplashKit.FillRectangle(_color, _x, _y, _width, _height);
             for (int i = 0; i < 3; i++)
             {
                 Console.Write("|");
+                //Initialise coordinate for circle
+                _circleY += 25;
                 for (int j = 0; j < 3; j++)
                 {
                     if (displayVal[i][j] == 1)
                     {
-                        Console.Write("o");
+                        SplashKit.FillCircle(Color.White, _circleX, _circleY, _circleRadius);
                     }
                     else
                     {
-                        Console.Write(" ");
+                        //Move the y Coordinate
+                        _circleY += 25;
                     }
                 }
-                Console.WriteLine("|");
             }
-            Console.WriteLine("-----");
 
         }
 
-        // Roll the dice in Java
-        private int Roll()
+        public void Roll()
         {
             var rand = new Random();
-            return rand.Next(6) + 1;
+            _diceValue = rand.Next(6) + 1;
         }
     }
 }
