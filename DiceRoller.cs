@@ -12,7 +12,7 @@ namespace DiceRoller
     {
         private Color _color;
         private double _x, _y, _width, _height;
-        private int _diceValue = 0;
+        private int _diceValue = 1;
 
         private int [][][] faceConfig = new int [][][]
             {
@@ -32,8 +32,8 @@ namespace DiceRoller
             _color = Color.Black;
             _x = 300;
             _y = 200;
-            _width = 200;
-            _height = 200;
+            _width = 300;
+            _height = 300;
         }
        /*
         * public static void Main(String[] args) {
@@ -58,27 +58,26 @@ namespace DiceRoller
        
 
         // Draw the dice face using splashkit shapes
-        public void Draw()
+        public void Draw(Window currentWindow)
         {
             int[][] displayVal = faceConfig[_diceValue - 1];
-            double _circleX = _x, _circleY = _y, _circleRadius = 50;
+            double _circleX = _x+30, _circleY = _y+10, _circleRadius = 30;
 
-            SplashKit.FillRectangle(_color, _x, _y, _width, _height);
+            currentWindow.FillRectangle(_color, _x, _y, _width, _height);
             for (int i = 0; i < 3; i++)
             {
-                Console.Write("|");
                 //Initialise coordinate for circle
-                _circleY += 25;
+                _circleY += 50;
                 for (int j = 0; j < 3; j++)
                 {
                     if (displayVal[i][j] == 1)
                     {
-                        SplashKit.FillCircle(Color.White, _circleX, _circleY, _circleRadius);
+                        currentWindow.FillCircle(Color.White, _circleX, _circleY, _circleRadius);
                     }
                     else
                     {
                         //Move the y Coordinate
-                        _circleY += 25;
+                        _circleX += 50;
                     }
                 }
             }
