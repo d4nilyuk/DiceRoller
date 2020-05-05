@@ -61,13 +61,15 @@ namespace DiceRoller
         public void Draw(Window currentWindow)
         {
             int[][] displayVal = faceConfig[_diceValue - 1];
-            double _circleX = _x+30, _circleY = _y+10, _circleRadius = 30;
+            double _circleX = _x, _circleY = _y, _circleRadius = 30;
 
             currentWindow.FillRectangle(_color, _x, _y, _width, _height);
+            _circleY += 50;
+            _circleX += 50;
             for (int i = 0; i < 3; i++)
             {
                 //Initialise coordinate for circle
-                _circleY += 50;
+
                 for (int j = 0; j < 3; j++)
                 {
                     if (displayVal[i][j] == 1)
@@ -76,10 +78,13 @@ namespace DiceRoller
                     }
                     else
                     {
-                        //Move the y Coordinate
-                        _circleX += 50;
+                        //Move the x Coordinate
+                        _circleX += 150;
                     }
                 }
+                _circleX = _x + 50;
+                _circleY += 100;
+
             }
 
         }
