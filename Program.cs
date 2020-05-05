@@ -17,8 +17,8 @@ namespace diceroll
          public DiceRollerInJava()
          {
             _color = Color.Aqua;
-             _x = 0;
-             _y = 0;
+             _x = 100;
+             _y = 100;
              _width = 100;
             _height = 100;
          }
