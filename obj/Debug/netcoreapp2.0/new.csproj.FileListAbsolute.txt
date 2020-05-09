@@ -1,0 +1,11 @@
+/Users/kiryadanilyuk/Desktop/UNI/DP1 SWE20001/P Tasks/new/bin/Debug/netcoreapp2.0/new.deps.json
+/Users/kiryadanilyuk/Desktop/UNI/DP1 SWE20001/P Tasks/new/bin/Debug/netcoreapp2.0/new.runtimeconfig.json
+/Users/kiryadanilyuk/Desktop/UNI/DP1 SWE20001/P Tasks/new/bin/Debug/netcoreapp2.0/new.runtimeconfig.dev.json
+/Users/kiryadanilyuk/Desktop/UNI/DP1 SWE20001/P Tasks/new/bin/Debug/netcoreapp2.0/new.dll
+/Users/kiryadanilyuk/Desktop/UNI/DP1 SWE20001/P Tasks/new/bin/Debug/netcoreapp2.0/new.pdb
+/Users/kiryadanilyuk/Desktop/UNI/DP1 SWE20001/P Tasks/new/obj/Debug/netcoreapp2.0/new.csprojAssemblyReference.cache
+/Users/kiryadanilyuk/Desktop/UNI/DP1 SWE20001/P Tasks/new/obj/Debug/netcoreapp2.0/new.AssemblyInfoInputs.cache
+/Users/kiryadanilyuk/Desktop/UNI/DP1 SWE20001/P Tasks/new/obj/Debug/netcoreapp2.0/new.AssemblyInfo.cs
+/Users/kiryadanilyuk/Desktop/UNI/DP1 SWE20001/P Tasks/new/obj/Debug/netcoreapp2.0/new.dll
+/Users/kiryadanilyuk/Desktop/UNI/DP1 SWE20001/P Tasks/new/obj/Debug/netcoreapp2.0/new.pdb
+/Users/kiryadanilyuk/Desktop/UNI/DP1 SWE20001/P Tasks/new/obj/Debug/netcoreapp2.0/new.genruntimeconfig.cache
